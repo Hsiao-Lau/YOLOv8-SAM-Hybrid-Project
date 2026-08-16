@@ -8,7 +8,7 @@
       The dataset could be freely available at [url](https://challenge.isic-archive.com/landing/2018/).
 # Usage
 ## Installation
-(1)clone the repository:<git clone https://github.com/Hsiao-Lau/yolov8_sam_hybrid_project.git>.   
+(1)clone the repository:<git clone https://github.com/Hsiao-Lau/YOLOv8-SAM-Hybrid-Project.git>.   
 (2)set up and activate the virtual environment of the project
 Dependencies can be installed using:
 ```
