@@ -1,0 +1,52 @@
+dataset:
+  name: isic2018
+  task: skin_lesion_segmentation
+  classes: [lesion]
+  image_size: 1024
+  detector_input_size: 640
+  mask_threshold: 0.48
+  min_component_area: 256
+  opening_kernel: 3
+  closing_kernel: 5
+  gaussian_sigma: 1.0
+
+detector:
+  model_size: yolov8s
+  initialization: yolov8s.pt
+  input_size: 640
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 112
+  patience: 22
+  confidence_threshold: 0.23
+  nms_iou_threshold: 0.47
+  project: runs/isic2018/yolo
+
+prompt:
+  t_medium: 9216
+  t_large: 65536
+  negative_points: 2
+  safety_distance: 16
+  deterministic: true
+  seed: 50937
+
+sam:
+  backbone: vit_b
+  checkpoint: weights/sam_vit_b_01ec64.pth
+  freeze_image_encoder: true
+  train_prompt_encoder: true
+  train_mask_decoder: true
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  batch_size: 4
+  epochs: 50
+  patience: 10
+  lambda_dice: 0.5
+  lambda_focal: 0.5
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+
+runtime:
+  device: auto
+  seed: 50937
+  output_dir: runs/isic2018/yolo_sam_hybrid
