@@ -5,7 +5,7 @@
        The training dataset (139 MRIs) could be freely available at [DOI](https://doi.org/10.5281/zenodo.6481141).  
        The test dataset（19 additional MRIs）could be freely available at [DOI](https://doi.org/10.5281/zenodo.6592345).    
   （2）ISIC2018
-      The dataset could be freely available at [url](https://challenge.isic-archive.com/landing/2018/).
+      The dataset could be freely available at [url](https://challenge.isic-archive.com/data/#2018).
 # Usage
 ## Installation
 (1)clone the repository:<git clone https://github.com/Hsiao-Lau/YOLOv8-SAM-Hybrid-Project.git>.   
